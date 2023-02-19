@@ -16,13 +16,11 @@ body {
 }
 
 .slides {
-  width: 500%;
   height: 600px;
   display: flex;
 }
 
 .slide {
-  width: 20%;
   transition: 2s;
 }
 
