@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f041a;
+}
+
+.slider {
+  width: 800px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 600px;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 600px;
+}
+
+.navigation {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
