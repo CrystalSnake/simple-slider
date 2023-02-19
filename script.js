@@ -1,12 +1,12 @@
-let counter = 2;
+let counter = 1;
 
-function slide(counter) {
+function slide() {
   document.querySelector('.first').style.marginLeft = `${(counter - 1) * -20}%`;
+  document.getElementById('radio-' + counter).checked = true;
 }
 
 setInterval(function () {
-  document.getElementById('radio-' + counter).checked = true;
-  slide(counter);
+  slide();
   counter++;
   if (counter > 5) {
     counter = 1;
@@ -18,6 +18,23 @@ radios.forEach(
   (item, index) =>
     (item.onclick = () => {
       counter = index + 1;
-      slide(counter);
+      slide();
     })
 );
+
+const next = document.querySelector('.next');
+next.addEventListener('click', () => {
+  if (counter < 5) {
+    counter++;
+  }
+
+  slide();
+});
+
+const prev = document.querySelector('.prev');
+prev.addEventListener('click', () => {
+  if (counter > 2) {
+    counter--;
+  }
+  slide();
+});
